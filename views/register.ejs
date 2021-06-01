@@ -1,0 +1,79 @@
+<! DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Registration Form</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <div class="formTitle">
+		<h3>Sign up for email updates</h3>
+		<p>*Indicates Required Field</p>
+	</div>
+
+
+    <div class="content">
+      <form action="/register" method="POST" id="register-form">
+        <div class="registrationInfo">
+          <div class="input-box">
+            <label for="firstname" class="details">FIRST NAME*</label>
+            <input type="text" aria-describedby="First Name" id="firstname" name="firstname" value="<%= qs.firstname %>" required>
+          </div>
+          <div class="input-box">
+            <label for="lastname"  class="details">LAST NAME*</label>
+            <input type="text" id="lastname" aria-describedby="Last Name" name="lastname" value="<%= qs.lastname %>" required>
+          </div>
+          <div class="input-box">
+            <label for="email" class="details">EMAIL*</label>
+            <input type="text" placeholder="Email Address" id="email" aria-describedby="Email Address" name="email" value="<%= qs.email %>" required>
+          </div>
+          <div class="input-box">
+            <label for="organization" class="details">ORGANIZATION</label>
+            <input type="text" id="organization" aria-describedby="Organization Name" name="organization" value="<%= qs.organization %>" required>
+          </div>
+        </div>
+
+		
+<!-- EU Resident Dropdown -->
+
+		<fieldset>
+			<label for="options">EU RESIDENT*</label>
+			<select name="options" id="options" required>
+				<option value="" tabindex="-1">- SELECT ONE -</option>
+				<option value="<%= qs.value1 %>" tabindex="-1">MENU ITEM 1</option>
+				<option value="<%= qs.value2 %>" tabindex="-1">MENU ITEM 2</option>
+				<option value="<%= qs.value3 %>" tabindex="-1">MENU ITEM 3</option>
+			</select>
+		</fieldset>
+
+<!-- Check Groups -->		
+		<fieldset>
+			<label class="check-group" for="checkbox1">
+				<input type="checkbox" id="checkbox1" name="checkbox1" value="<%= qs.checkbox1 %>">ADVANCES
+				<span class="checkmark"></span>
+			</label>
+			<label class="check-group" for="checkbox2">
+				<input type="checkbox" id="checkbox2" name="checkbox2" value="<%= qs.checkbox2 %>">ALERTS
+				<span class="checkmark"></span>
+			</label>
+			<label class="check-group" for="checkbox3">
+				<input type="checkbox" id="checkbox3" name="checkbox3" value="<%= qs.checkbox3 %>">OTHER COMMUNICATIONS
+				<span class="checkmark"></span>
+			</label>
+		</fieldset>
+				
+        <div class="button">
+		  <button type="submit" value="Submit">SUBMIT</button>
+		  <button type="reset" value="Reset">RESET</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
