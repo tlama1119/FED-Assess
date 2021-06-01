@@ -1,0 +1,18 @@
+$myfont: Open Sans 100%;
+$container_width: 700px;
+$bgcolor: #fff;
+$textcolor: #000;
+$fontsize: 100%;
+
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+}
+
+div.container {
+    margin: auto; 
+    font: $myfont;
+    width: $container_width;
+}
+

@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Open Sans:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 100%;
+  background-image: url('../assets/texture.png');
+  background-position: center;
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.formTitle h3{
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.formTitle p{
+  font-size: 0.9em;
+  text-align:left;
+  padding: 10px 0;
+}
+.container .formTitle::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+}
+.content form .registrationInfo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .registrationInfo .input-box{
+  margin-bottom: 15px;
+  width: 45%;
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.registrationInfo .input-box input{
+  height: 50px;
+  width: 100%;
+  outline: none;
+  margin-top: 10px;
+  font-size: 1em;
+  padding-left: 15px;
+  border: 2px solid #CFE7E5;
+  border-bottom-width: 2px;
+  box-shadow: 1px 1px 10px #ccc;
+}
+.registrationInfo .input-box input:focus,
+.registrationInfo .input-box input:valid{
+  border-color: #A1D2CE;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.check-group {
+    position: relative;
+    padding-top: 2px;
+    padding-left: 45px;
+    line-height: 1.25;
+    min-height: 50px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.check-group input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+label>[type=checkbox] {
+    margin-right: .5rem;
+}
+[type=checkbox] {
+    margin: 0 0 1rem;
+    box-sizing: border-box;
+    padding: 0;
+}
+.check-group input:checked~.checkmark {
+    background-color: #803093;
+}
+
+.check-group .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border: 2px solid #CFE7E5;
+	box-shadow: 1px 1px 10px #ccc;
+}
+
+.check-group input:checked~.checkmark:after {
+    display: block;
+}
+
+.check-group .checkmark:after {
+content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 2px;
+    width: 10px;
+    height: 14px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+label {
+    display: block;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+select:not([multiple]) {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-position: right -27px center;
+    background-repeat: no-repeat;
+    background-image: url('assets/text-expand-arrow.png');
+    background-size: 16px;
+    padding: 0 40px 0 10px;
+    min-height: 50px;
+	box-sizing: border-box;
+    width: auto;
+    font-size: 1rem;
+	margin-bottom:35px;
+	border: 2px solid #CFE7E5;
+	box-shadow: 1px 1px 10px #ccc;
+}
+
+button{
+    width: 245px;
+    min-height: 7%;
+    background-color: #fff;
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 2em 0.5em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 600;
+	font-size: inherit;
+    color: #000;
+    /* background-color: #803093; */
+    text-align: center;
+    transition: all 0.2s;
+ }
+
+button:hover{
+  background: #803093;
+  color: #fff;
+  cursor:pointer;
+  }
+ @media(max-width: 768px){
+ .container{
+  max-width: 100%;
+}
+form .registrationInfo .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .registrationInfo{
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+  .registrationInfo::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 768px){
+  .container .content .category{
+    flex-direction: column;
+  }
+  button {
+	  margin: 10px 0;
+	  width:275px;
+  }
+}
